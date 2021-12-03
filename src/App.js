@@ -21,6 +21,11 @@ function App() {
 		setCart(cart.filter((p) => p.id !== plant.id));
 	};
 
+	// Set Alert
+	const setAlert = (msg, type) => {
+		this.setState({ alert: { msg: msg, type: type } });
+	};
+
 	return (
 		<div>
 			<Router>
@@ -59,7 +64,7 @@ function App() {
 						/>
 					)}
 				/>
-				<Route path='/checkout' component={CheckoutForm} />
+				<Route path='/checkout' component={CheckoutForm} setAlert={setAlert} />
 			</Router>
 		</div>
 	);

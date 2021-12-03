@@ -8,6 +8,7 @@ const initialValue = {
 	city: '',
 	state: '',
 	zip: '',
+	alert: null,
 };
 
 // This form should be handled by a "useForm" custom hook
@@ -19,9 +20,22 @@ const CheckoutForm = (props) => {
 	const [values, handleChanges] = useForm(initialValue);
 	// const { values, handleChanges } = useform();
 
+	// Set Alert
+	// const setAlert = (msg, type) => {
+	// 	this.setState({ alert: { msg: msg, type: type } });
+	// };
+	// console.log(setAlert);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setShowSuccessMessage(true);
+
+		// if (values === '') {
+		// 	setShowSuccessMessage(false);
+		// 	setAlert('Please enter something into all fields...', 'light');
+		// } else {
+		// 	setShowSuccessMessage(true);
+		// }
 	};
 
 	return (
