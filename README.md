@@ -103,7 +103,7 @@ test the functioning of the server directly through your axios calls.**
       have running - the data can be fetched from
       `http://localhost:3333/plants.`
 - [x] Set the data to a state property called `this.state.plants.`
-- [ ] The render function is already built and styled. Once the data is on the
+- [x] The render function is already built and styled. Once the data is on the
       state, you will see the list of plants, and you will have the
       functionality to add a plant to the cart.
 
