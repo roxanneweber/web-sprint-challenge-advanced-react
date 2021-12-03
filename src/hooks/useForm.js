@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const useForm = (initialState) => {
-	const [values, setValues] = useState(initialState);
+	const [values, setValues, setAlert] = useState(initialState);
 
 	const handleChanges = (e) => {
 		setValues({ ...values, [e.target.name]: e.target.value });
